@@ -14,6 +14,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
 public class ModBlocks {
@@ -23,21 +25,22 @@ public class ModBlocks {
 
         // Register items to the custom item group.
         ItemGroupEvents.modifyEntriesEvent(CUSTOM_ITEM_GROUP_KEY).register(itemGroup -> {
-            for (Block block : BLOCKS) {
+            for (Block block : MOD_BLOCKS) {
                 itemGroup.accept(block);
             }
         });
 
     }
 
-    private static Block register(Item item) {
-        String name = BuiltInRegistries.ITEM.getKey(item).getPath();
+    private static Block register(SupportedItemInfo info) {
+        String name = BuiltInRegistries.ITEM.getKey(info.item).getPath();
         name = "compressed_" + name;
 
 		// Create a registry key for the block
 		ResourceKey<Block> blockKey = keyOfBlock(name);
 
-        BlockBehaviour.Properties settings = BlockBehaviour.Properties.of();
+        BlockBehaviour.Properties settings = info.properties;
+
 		// Create the block instance
 		Block block = new Block(settings.setId(blockKey));
 
@@ -59,22 +62,22 @@ public class ModBlocks {
 		return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(ZiggysCompressedBlocks.MOD_ID, name));
 	}
 
-    public static final Item[] SupportedItems = {
-        Items.DIRT,
-        Items.ENDER_PEARL
+    public static final SupportedItemInfo[] SupportedItems = {
+        new SupportedItemInfo(Items.DIRT, Blocks.DIRT),
+        new SupportedItemInfo(Items.ENDER_PEARL, 0.5f, SoundType.GLASS),
     };
 
-    public static final Block[] BLOCKS = new Block[SupportedItems.length];
+    public static final Block[] MOD_BLOCKS = new Block[SupportedItems.length];
     static {
         for (int i = 0; i < SupportedItems.length; i++) {
-            BLOCKS[i] = register(SupportedItems[i]);
+            MOD_BLOCKS[i] = register(SupportedItems[i]);
         }
     }
 
     // Creative mode tab
     public static final ResourceKey<CreativeModeTab> CUSTOM_ITEM_GROUP_KEY = ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(), Identifier.fromNamespaceAndPath(ZiggysCompressedBlocks.MOD_ID, "item_group"));
     public static final CreativeModeTab CUSTOM_ITEM_GROUP = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(BLOCKS[0]))
+            .icon(() -> new ItemStack(MOD_BLOCKS[0]))
             .title(Component.translatable("itemGroup.ziggys_compressed_blocks"))
             .build();
 

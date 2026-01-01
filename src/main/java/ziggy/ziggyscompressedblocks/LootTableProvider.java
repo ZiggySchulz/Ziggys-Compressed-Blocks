@@ -14,7 +14,7 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
 
 	@Override
 	public void generate() {
-        for (Block block : ModBlocks.BLOCKS) {
+        for (Block block : ModBlocks.MOD_BLOCKS) {
             dropSelf(block);
         }
 	}

@@ -23,8 +23,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 			@Override
 			public void buildRecipes() {
 				for (int i = 0; i < ModBlocks.SupportedItems.length; i++) {
-					Item baseItem = ModBlocks.SupportedItems[i];
-					Block compressedBlock = ModBlocks.BLOCKS[i];
+					Item baseItem = ModBlocks.SupportedItems[i].item;
+					Block compressedBlock = ModBlocks.MOD_BLOCKS[i];
 					
 					shaped(RecipeCategory.BUILDING_BLOCKS, compressedBlock)
 						.pattern("iii")

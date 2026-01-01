@@ -13,7 +13,7 @@ public class BlockModelProvider extends FabricModelProvider {
 
 	@Override
 	public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
-        for (Block block : ModBlocks.BLOCKS) {
+        for (Block block : ModBlocks.MOD_BLOCKS) {
             blockStateModelGenerator.createTrivialCube(block);
         }
 	}

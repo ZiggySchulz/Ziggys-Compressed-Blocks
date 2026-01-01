@@ -20,10 +20,12 @@ public class EnglishLangProvider extends FabricLanguageProvider {
 	@Override
 	public void generateTranslations(HolderLookup.Provider wrapperLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add("itemGroup.ziggys_compressed_blocks", "Ziggy's Compressed Blocks");
-        for (Item item : ModBlocks.SupportedItems) {
-            String itemName = BuiltInRegistries.ITEM.getKey(item).getPath();
+        for (SupportedItemInfo info : ModBlocks.SupportedItems) {
+            String itemName = BuiltInRegistries.ITEM.getKey(info.item).getPath();
             itemName = "Compressed " + toTitleCase(itemName.replace('_', ' '));
-            translationBuilder.add("block.ziggys-compressed-blocks.compressed_" + BuiltInRegistries.ITEM.getKey(item).getPath(), itemName);
+            translationBuilder.add(
+                    "block.ziggys-compressed-blocks.compressed_" + BuiltInRegistries.ITEM.getKey(info.item).getPath(),
+                    itemName);
         }
 	}
 
