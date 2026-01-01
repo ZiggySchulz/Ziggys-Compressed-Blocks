@@ -8,5 +8,6 @@ public class UltimateCompressedBlocksDataGenerator implements DataGeneratorEntry
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 		pack.addProvider(EnglishLangProvider::new);
+		pack.addProvider(BlockModelProvider::new);
 	}
 }
