@@ -10,5 +10,6 @@ public class UltimateCompressedBlocksDataGenerator implements DataGeneratorEntry
 		pack.addProvider(EnglishLangProvider::new);
 		pack.addProvider(BlockModelProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
+		pack.addProvider(LootTableProvider::new);
 	}
 }
