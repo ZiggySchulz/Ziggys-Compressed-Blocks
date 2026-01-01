@@ -1,5 +1,7 @@
 package ziggy.ziggyscompressedblocks;
 
+import java.util.List;
+
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
@@ -8,6 +10,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -19,11 +22,15 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
 public class ModBlocks {
-    public static void initialize() {
-        // Register the group.
-        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, CUSTOM_ITEM_GROUP_KEY, CUSTOM_ITEM_GROUP);
+    // Supported blocks. Add new supported blocks here
+    public static final SupportedItemInfo[] SupportedItems = {
+        new SupportedItemInfo(Items.DIRT, Blocks.DIRT, List.of(BlockTags.MINEABLE_WITH_SHOVEL)),
+        new SupportedItemInfo(Items.ENDER_PEARL, 0.5f, SoundType.GLASS, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
+    };
 
-        // Register items to the custom item group.
+    public static void initialize() {
+        // Register the creative mode tab.
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, CUSTOM_ITEM_GROUP_KEY, CUSTOM_ITEM_GROUP);
         ItemGroupEvents.modifyEntriesEvent(CUSTOM_ITEM_GROUP_KEY).register(itemGroup -> {
             for (Block block : MOD_BLOCKS) {
                 itemGroup.accept(block);
@@ -39,9 +46,8 @@ public class ModBlocks {
 		// Create a registry key for the block
 		ResourceKey<Block> blockKey = keyOfBlock(name);
 
-        BlockBehaviour.Properties settings = info.properties;
-
 		// Create the block instance
+        BlockBehaviour.Properties settings = info.properties;
 		Block block = new Block(settings.setId(blockKey));
 
         // Items need to be registered with a different type of registry key, but the ID
@@ -61,11 +67,6 @@ public class ModBlocks {
 	private static ResourceKey<Item> keyOfItem(String name) {
 		return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(ZiggysCompressedBlocks.MOD_ID, name));
 	}
-
-    public static final SupportedItemInfo[] SupportedItems = {
-        new SupportedItemInfo(Items.DIRT, Blocks.DIRT),
-        new SupportedItemInfo(Items.ENDER_PEARL, 0.5f, SoundType.GLASS),
-    };
 
     public static final Block[] MOD_BLOCKS = new Block[SupportedItems.length];
     static {

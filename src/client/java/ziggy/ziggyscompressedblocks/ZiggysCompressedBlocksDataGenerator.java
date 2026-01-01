@@ -11,5 +11,6 @@ public class ZiggysCompressedBlocksDataGenerator implements DataGeneratorEntrypo
 		pack.addProvider(BlockModelProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
 		pack.addProvider(LootTableProvider::new);
+		pack.addProvider(TagProvider::new);
 	}
 }
