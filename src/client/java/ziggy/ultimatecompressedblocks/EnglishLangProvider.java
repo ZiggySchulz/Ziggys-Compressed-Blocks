@@ -19,10 +19,11 @@ public class EnglishLangProvider extends FabricLanguageProvider {
 
 	@Override
 	public void generateTranslations(HolderLookup.Provider wrapperLookup, TranslationBuilder translationBuilder) {
+        translationBuilder.add("itemGroup.ultimate_compressed_blocks", "Ultimate Compressed Blocks");
         for (Item item : ModBlocks.SupportedItems) {
             String itemName = BuiltInRegistries.ITEM.getKey(item).getPath();
             itemName = "Compressed " + toTitleCase(itemName.replace('_', ' '));
-            translationBuilder.add("item.ultimate_compressed_blocks.compressed_" + BuiltInRegistries.ITEM.getKey(item).getPath(), itemName);
+            translationBuilder.add("block.ultimate-compressed-blocks.compressed_" + BuiltInRegistries.ITEM.getKey(item).getPath(), itemName);
         }
 	}
 
