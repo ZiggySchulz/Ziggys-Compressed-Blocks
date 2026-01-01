@@ -1,12 +1,12 @@
-package ziggy.ultimatecompressedblocks;
+package ziggy.ziggyscompressedblocks;
 
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class UltimateCompressedBlocks implements ModInitializer {
-	public static final String MOD_ID = "ultimate-compressed-blocks";
+public class ZiggysCompressedBlocks implements ModInitializer {
+	public static final String MOD_ID = "ziggys-compressed-blocks";
 
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.

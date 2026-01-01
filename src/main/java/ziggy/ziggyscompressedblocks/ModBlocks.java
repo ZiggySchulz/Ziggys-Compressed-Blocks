@@ -1,4 +1,4 @@
-package ziggy.ultimatecompressedblocks;
+package ziggy.ziggyscompressedblocks;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -52,11 +52,11 @@ public class ModBlocks {
 	}
 
 	private static ResourceKey<Block> keyOfBlock(String name) {
-		return ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(UltimateCompressedBlocks.MOD_ID, name));
+		return ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(ZiggysCompressedBlocks.MOD_ID, name));
 	}
 
 	private static ResourceKey<Item> keyOfItem(String name) {
-		return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(UltimateCompressedBlocks.MOD_ID, name));
+		return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(ZiggysCompressedBlocks.MOD_ID, name));
 	}
 
     public static final Item[] SupportedItems = {
@@ -72,10 +72,10 @@ public class ModBlocks {
     }
 
     // Creative mode tab
-    public static final ResourceKey<CreativeModeTab> CUSTOM_ITEM_GROUP_KEY = ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(), Identifier.fromNamespaceAndPath(UltimateCompressedBlocks.MOD_ID, "item_group"));
+    public static final ResourceKey<CreativeModeTab> CUSTOM_ITEM_GROUP_KEY = ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(), Identifier.fromNamespaceAndPath(ZiggysCompressedBlocks.MOD_ID, "item_group"));
     public static final CreativeModeTab CUSTOM_ITEM_GROUP = FabricItemGroup.builder()
             .icon(() -> new ItemStack(BLOCKS[0]))
-            .title(Component.translatable("itemGroup.ultimate_compressed_blocks"))
+            .title(Component.translatable("itemGroup.ziggys_compressed_blocks"))
             .build();
 
 

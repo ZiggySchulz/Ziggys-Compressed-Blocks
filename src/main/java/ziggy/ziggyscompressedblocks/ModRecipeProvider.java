@@ -1,4 +1,4 @@
-package ziggy.ultimatecompressedblocks;
+package ziggy.ziggyscompressedblocks;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -31,7 +31,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 						.pattern("iii")
 						.pattern("iii")
 						.define('i', baseItem)
-						.unlockedBy(getHasName(Items.CRAFTING_TABLE), has(baseItem))
+						.unlockedBy(getHasName(Items.CRAFTING_TABLE), has(Items.CRAFTING_TABLE))
+						.unlockedBy(getHasName(baseItem), has(baseItem))
 						.save(output);
 
 					

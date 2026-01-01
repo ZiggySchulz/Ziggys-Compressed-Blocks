@@ -1,4 +1,4 @@
-package ziggy.ultimatecompressedblocks;
+package ziggy.ziggyscompressedblocks;
 
 import java.util.concurrent.CompletableFuture;
 

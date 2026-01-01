@@ -1,4 +1,4 @@
-package ziggy.ultimatecompressedblocks;
+package ziggy.ziggyscompressedblocks;
 
 import java.util.Arrays;
 import java.util.concurrent.CompletableFuture;
@@ -19,11 +19,11 @@ public class EnglishLangProvider extends FabricLanguageProvider {
 
 	@Override
 	public void generateTranslations(HolderLookup.Provider wrapperLookup, TranslationBuilder translationBuilder) {
-        translationBuilder.add("itemGroup.ultimate_compressed_blocks", "Ultimate Compressed Blocks");
+        translationBuilder.add("itemGroup.ziggys_compressed_blocks", "Ziggy's Compressed Blocks");
         for (Item item : ModBlocks.SupportedItems) {
             String itemName = BuiltInRegistries.ITEM.getKey(item).getPath();
             itemName = "Compressed " + toTitleCase(itemName.replace('_', ' '));
-            translationBuilder.add("block.ultimate-compressed-blocks.compressed_" + BuiltInRegistries.ITEM.getKey(item).getPath(), itemName);
+            translationBuilder.add("block.ziggys-compressed-blocks.compressed_" + BuiltInRegistries.ITEM.getKey(item).getPath(), itemName);
         }
 	}
 

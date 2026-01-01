@@ -22,7 +22,7 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"ultimate-compressed-blocks" {
+		"ziggys-compressed-blocks" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}

@@ -1,4 +1,4 @@
-package ziggy.ultimatecompressedblocks;
+package ziggy.ziggyscompressedblocks;
 
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -24,6 +24,6 @@ public class BlockModelProvider extends FabricModelProvider {
 
 	@Override
 	public String getName() {
-		return "UltimateCompressedBlocksModelProvider";
+		return "BlockModelProvider";
 	}
 }

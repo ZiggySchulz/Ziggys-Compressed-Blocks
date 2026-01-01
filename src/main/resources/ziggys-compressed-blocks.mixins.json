@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "ziggy.ultimatecompressedblocks.mixin",
+	"package": "ziggy.ziggyscompressedblocks.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
 		"ExampleMixin"

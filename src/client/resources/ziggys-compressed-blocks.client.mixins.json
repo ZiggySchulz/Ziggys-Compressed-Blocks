@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "ziggy.ultimatecompressedblocks.mixin.client",
+	"package": "ziggy.ziggyscompressedblocks.mixin.client",
 	"compatibilityLevel": "JAVA_21",
 	"client": [
 		"ExampleClientMixin"

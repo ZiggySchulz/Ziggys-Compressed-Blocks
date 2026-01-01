@@ -1,4 +1,4 @@
-package ziggy.ultimatecompressedblocks.mixin.client;
+package ziggy.ziggyscompressedblocks.mixin.client;
 
 import net.minecraft.client.Minecraft;
 import org.spongepowered.asm.mixin.Mixin;
