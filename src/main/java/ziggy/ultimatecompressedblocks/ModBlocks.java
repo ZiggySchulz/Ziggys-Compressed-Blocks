@@ -61,7 +61,7 @@ public class ModBlocks {
 
     public static final Item[] SupportedItems = {
         Items.DIRT,
-        Items.STONE_AXE
+        Items.ENDER_PEARL
     };
 
     public static final Block[] BLOCKS = new Block[SupportedItems.length];

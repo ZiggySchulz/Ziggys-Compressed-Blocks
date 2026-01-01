@@ -9,5 +9,6 @@ public class UltimateCompressedBlocksDataGenerator implements DataGeneratorEntry
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 		pack.addProvider(EnglishLangProvider::new);
 		pack.addProvider(BlockModelProvider::new);
+		pack.addProvider(ModRecipeProvider::new);
 	}
 }
