@@ -33,6 +33,10 @@ public class ModBlocks {
         new SupportedItemInfo(Items.NETHERRACK, Blocks.NETHERRACK, List.of(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.INFINIBURN_OVERWORLD, BlockTags.INFINIBURN_NETHER, BlockTags.INFINIBURN_END)),
         new SupportedItemInfo(Items.END_STONE, Blocks.END_STONE, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
         new SupportedItemInfo(Items.OBSIDIAN, Blocks.OBSIDIAN, List.of(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_DIAMOND_TOOL)),
+        new SupportedItemInfo(Items.COBBLED_DEEPSLATE, Blocks.COBBLED_DEEPSLATE, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
+        new SupportedItemInfo(Items.DEEPSLATE, Blocks.DEEPSLATE, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
+        new SupportedItemInfo(Items.BLACKSTONE, Blocks.BLACKSTONE, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
+        new SupportedItemInfo(Items.BASALT, Blocks.BASALT, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
 
         // Crops
         new SupportedItemInfo(Items.CARROT, 0.3f, SoundType.CROP, List.of(BlockTags.MINEABLE_WITH_HOE)),
