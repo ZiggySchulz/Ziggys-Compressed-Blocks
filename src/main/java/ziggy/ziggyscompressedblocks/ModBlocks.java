@@ -55,9 +55,23 @@ public class ModBlocks {
         new SupportedItemInfo(Items.SPIDER_EYE, 0.1f, SoundType.NETHER_WART, List.of(BlockTags.SWORD_EFFICIENT)),
         new SupportedItemInfo(Items.GUNPOWDER, 0.1f, SoundType.SAND, List.of(BlockTags.MINEABLE_WITH_SHOVEL)),
         new SupportedItemInfo(Items.ROTTEN_FLESH, 0.1f, SoundType.NETHER_WART, List.of(BlockTags.SWORD_EFFICIENT)),
-        new SupportedItemInfo(Items.ENDER_PEARL, 0.5f, SoundType.AMETHYST, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
-        new SupportedItemInfo(Items.BLAZE_ROD, 0.3f, SoundType.WOOD, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
         new SupportedItemInfo(Items.GHAST_TEAR, 0.3f, SoundType.DRIED_GHAST, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
+        
+        new SupportedItemInfo(
+            Items.ENDER_PEARL,
+            BlockBehaviour.Properties.of()
+                .strength(0.5f)
+                .sound(SoundType.AMETHYST)
+                .lightLevel(blockstate -> 5),
+            List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
+        
+        new SupportedItemInfo(
+            Items.BLAZE_ROD, 
+            BlockBehaviour.Properties.of()
+                .strength(0.3f)
+                .sound(SoundType.WOOD)
+                .lightLevel(blockstate -> 15), 
+            List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
     };
 
     public static void initialize() {
