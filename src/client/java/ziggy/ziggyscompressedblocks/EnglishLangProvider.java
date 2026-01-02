@@ -13,7 +13,6 @@ import net.minecraft.world.item.Item;
 
 public class EnglishLangProvider extends FabricLanguageProvider {
     protected EnglishLangProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
-		// Specifying en_us is optional, as it's the default language code
 		super(dataOutput, "en_us", registryLookup);
 	}
 
