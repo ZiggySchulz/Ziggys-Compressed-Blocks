@@ -24,8 +24,36 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 public class ModBlocks {
     // Supported blocks. Add new supported blocks here
     public static final SupportedItemInfo[] SupportedItems = {
+        // World generation blocks
         new SupportedItemInfo(Items.DIRT, Blocks.DIRT, List.of(BlockTags.MINEABLE_WITH_SHOVEL)),
-        new SupportedItemInfo(Items.ENDER_PEARL, 0.5f, SoundType.GLASS, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
+        new SupportedItemInfo(Items.COBBLESTONE, Blocks.COBBLESTONE, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
+        new SupportedItemInfo(Items.STONE, Blocks.STONE, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
+        new SupportedItemInfo(Items.SAND, Blocks.SAND, List.of(BlockTags.MINEABLE_WITH_SHOVEL)),
+        new SupportedItemInfo(Items.GRASS_BLOCK, Blocks.GRASS_BLOCK, List.of(BlockTags.MINEABLE_WITH_SHOVEL)),
+        new SupportedItemInfo(Items.NETHERRACK, Blocks.NETHERRACK, List.of(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.INFINIBURN_OVERWORLD, BlockTags.INFINIBURN_NETHER, BlockTags.INFINIBURN_END)),
+        new SupportedItemInfo(Items.END_STONE, Blocks.END_STONE, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
+        new SupportedItemInfo(Items.OBSIDIAN, Blocks.OBSIDIAN, List.of(BlockTags.MINEABLE_WITH_PICKAXE, BlockTags.NEEDS_DIAMOND_TOOL)),
+
+        // Crops
+        new SupportedItemInfo(Items.CARROT, 0.3f, SoundType.CROP, List.of(BlockTags.MINEABLE_WITH_HOE)),
+        new SupportedItemInfo(Items.POTATO, 0.3f, SoundType.CROP, List.of(BlockTags.MINEABLE_WITH_HOE)),
+        new SupportedItemInfo(Items.BEETROOT, 0.3f, SoundType.CROP, List.of(BlockTags.MINEABLE_WITH_HOE)),
+        new SupportedItemInfo(Items.SUGAR_CANE, 0.25f, SoundType.BAMBOO, List.of(BlockTags.MINEABLE_WITH_HOE)),
+        new SupportedItemInfo(Items.MELON, Blocks.MELON, List.of(BlockTags.MINEABLE_WITH_AXE)),
+        new SupportedItemInfo(Items.PUMPKIN, Blocks.PUMPKIN, List.of(BlockTags.MINEABLE_WITH_AXE)),
+        new SupportedItemInfo(Items.CACTUS, Blocks.CACTUS, List.of(BlockTags.MINEABLE_WITH_SHOVEL)),
+
+        // Mobs
+        new SupportedItemInfo(Items.FEATHER, 0.1f, SoundType.WOOL, List.of(BlockTags.SWORD_EFFICIENT)),
+        new SupportedItemInfo(Items.EGG, 0.1f, SoundType.MUD_BRICKS, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
+        new SupportedItemInfo(Items.LEATHER, 0.2f, SoundType.WOOL, List.of(BlockTags.SWORD_EFFICIENT)),
+        new SupportedItemInfo(Items.ARROW, 0.1f, SoundType.WOOD, List.of(BlockTags.MINEABLE_WITH_AXE)),
+        new SupportedItemInfo(Items.SPIDER_EYE, 0.1f, SoundType.NETHER_WART, List.of(BlockTags.SWORD_EFFICIENT)),
+        new SupportedItemInfo(Items.GUNPOWDER, 0.1f, SoundType.SAND, List.of(BlockTags.MINEABLE_WITH_SHOVEL)),
+        new SupportedItemInfo(Items.ROTTEN_FLESH, 0.1f, SoundType.NETHER_WART, List.of(BlockTags.SWORD_EFFICIENT)),
+        new SupportedItemInfo(Items.ENDER_PEARL, 0.5f, SoundType.AMETHYST, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
+        new SupportedItemInfo(Items.BLAZE_ROD, 0.3f, SoundType.WOOD, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
+        new SupportedItemInfo(Items.GHAST_TEAR, 0.3f, SoundType.DRIED_GHAST, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
     };
 
     public static void initialize() {
