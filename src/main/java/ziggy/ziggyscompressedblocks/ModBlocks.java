@@ -37,6 +37,7 @@ public class ModBlocks {
         new SupportedItemInfo(Items.DEEPSLATE, Blocks.DEEPSLATE, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
         new SupportedItemInfo(Items.BLACKSTONE, Blocks.BLACKSTONE, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
         new SupportedItemInfo(Items.BASALT, Blocks.BASALT, List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
+        new SupportedItemInfo(Items.MOSS_BLOCK, Blocks.MOSS_BLOCK, List.of(BlockTags.MINEABLE_WITH_HOE)),
 
         // Crops
         new SupportedItemInfo(Items.CARROT, 0.3f, SoundType.CROP, List.of(BlockTags.MINEABLE_WITH_HOE)),
