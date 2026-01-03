@@ -8,7 +8,7 @@ The goal isn't to compress every block, or recursive compressions, as these mods
 Run
 `./gradew runDatagen && ./gradlew build`
 
-The mod will be placed in `build/libs/
+The mod will be placed in `build/libs/`
 Copy the .jar file to your Minecraft mods folder. Ignore the sources file
 
 ## Contributing
