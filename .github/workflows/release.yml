@@ -1,0 +1,25 @@
+name: release
+on:
+  push:
+    tags: ["v*"]
+
+jobs:
+  run-build:
+    uses: ./.github/workflows/build.yml
+
+  create-release:
+    needs: run-build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: Artifacts
+          path: release-assets
+
+      - name: upload to release
+        uses: softprops/action-gh-release@v2
+        with:
+            files: release-assets/ziggys-compressed-blocks-*[0-9].jar
