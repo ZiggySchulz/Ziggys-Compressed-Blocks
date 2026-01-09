@@ -25,13 +25,6 @@
 			"ziggy.ziggyscompressedblocks.ZiggysCompressedBlocksDataGenerator"
 		]
 	},
-	"mixins": [
-		"ziggys-compressed-blocks.mixins.json",
-		{
-			"config": "ziggys-compressed-blocks.client.mixins.json",
-			"environment": "client"
-		}
-	],
 	"depends": {
 		"fabricloader": ">=0.18.4",
 		"minecraft": "~1.21.11",
