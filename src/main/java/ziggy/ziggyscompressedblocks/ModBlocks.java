@@ -46,6 +46,11 @@ public class ModBlocks {
             List.of(BlockTags.MINEABLE_WITH_SHOVEL)
         ),
         new SupportedItemInfo(
+            Items.GRAVEL, 
+            Blocks.GRAVEL, 
+            List.of(BlockTags.MINEABLE_WITH_SHOVEL)
+        ),
+        new SupportedItemInfo(
             Items.GRASS_BLOCK, 
             Blocks.GRASS_BLOCK, 
             List.of(BlockTags.MINEABLE_WITH_SHOVEL)
