@@ -18,8 +18,10 @@ public class SupportedItemInfo {
         this.item = item;
         this.tags = tags;
         
+        final float STR_MULTIPLIER = 1.3f;
         properties = BlockBehaviour.Properties.ofFullCopy(block);
-        properties.strength(block.defaultDestroyTime() * 1.09f, block.getExplosionResistance() * 1.09f);
+        properties.strength(block.defaultDestroyTime() * STR_MULTIPLIER,
+                block.getExplosionResistance() * STR_MULTIPLIER);
         properties.pushReaction(PushReaction.NORMAL);
     }
 

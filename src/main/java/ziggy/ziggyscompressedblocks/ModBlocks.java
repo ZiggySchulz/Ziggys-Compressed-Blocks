@@ -107,25 +107,25 @@ public class ModBlocks {
         // Crops
         new SupportedItemInfo(
             Items.CARROT, 
-            0.3f, 
+            0.4f, 
             SoundType.CROP, 
             List.of(BlockTags.MINEABLE_WITH_HOE)
         ),
         new SupportedItemInfo(
             Items.POTATO, 
-            0.3f, 
+            0.4f, 
             SoundType.CROP, 
             List.of(BlockTags.MINEABLE_WITH_HOE)
         ),
         new SupportedItemInfo(
             Items.BEETROOT, 
-            0.3f, 
+            0.4f, 
             SoundType.CROP, 
             List.of(BlockTags.MINEABLE_WITH_HOE)
         ),
         new SupportedItemInfo(
             Items.SUGAR_CANE, 
-            0.25f, 
+            0.4f, 
             SoundType.BAMBOO, 
             List.of(BlockTags.MINEABLE_WITH_HOE)
         ),
@@ -148,49 +148,49 @@ public class ModBlocks {
         // Mobs
         new SupportedItemInfo(
             Items.FEATHER, 
-            0.1f, 
+            0.3f, 
             SoundType.WOOL, 
             List.of(BlockTags.SWORD_EFFICIENT)
         ),
         new SupportedItemInfo(
             Items.EGG, 
-            0.1f, 
+            0.4f, 
             SoundType.MUD_BRICKS, 
             List.of(BlockTags.MINEABLE_WITH_PICKAXE)
         ),
         new SupportedItemInfo(
             Items.LEATHER, 
-            0.2f, 
+            0.4f, 
             SoundType.WOOL, 
             List.of(BlockTags.SWORD_EFFICIENT)
         ),
         new SupportedItemInfo(
             Items.ARROW, 
-            0.1f, 
+            0.5f, 
             SoundType.WOOD, 
             List.of(BlockTags.MINEABLE_WITH_AXE)
         ),
         new SupportedItemInfo(
             Items.SPIDER_EYE, 
-            0.1f, 
+            0.4f, 
             SoundType.NETHER_WART, 
             List.of(BlockTags.SWORD_EFFICIENT)
         ),
         new SupportedItemInfo(
             Items.GUNPOWDER, 
-            0.1f, 
+            0.4f, 
             SoundType.SAND, 
             List.of(BlockTags.MINEABLE_WITH_SHOVEL)
         ),
         new SupportedItemInfo(
             Items.ROTTEN_FLESH, 
-            0.1f, 
+            0.4f, 
             SoundType.NETHER_WART, 
             List.of(BlockTags.SWORD_EFFICIENT)
         ),
         new SupportedItemInfo(
             Items.GHAST_TEAR, 
-            0.3f, 
+            0.5f, 
             SoundType.DRIED_GHAST, 
             List.of(BlockTags.MINEABLE_WITH_PICKAXE)
         ),
@@ -198,7 +198,7 @@ public class ModBlocks {
         new SupportedItemInfo(
             Items.ENDER_PEARL,
             BlockBehaviour.Properties.of()
-                .strength(0.5f)
+                .strength(0.7f)
                 .sound(SoundType.AMETHYST)
                 .lightLevel(blockstate -> 5),
             List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
@@ -206,7 +206,7 @@ public class ModBlocks {
         new SupportedItemInfo(
             Items.BLAZE_ROD, 
             BlockBehaviour.Properties.of()
-                .strength(0.3f)
+                .strength(0.7f)
                 .sound(SoundType.WOOD)
                 .lightLevel(blockstate -> 15), 
             List.of(BlockTags.MINEABLE_WITH_PICKAXE)),
