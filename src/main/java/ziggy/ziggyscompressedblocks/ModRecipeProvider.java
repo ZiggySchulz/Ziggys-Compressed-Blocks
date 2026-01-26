@@ -36,7 +36,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 						.save(output);
 
 					
-					shapeless(RecipeCategory.BUILDING_BLOCKS, baseItem, 9)
+					shapeless(RecipeCategory.MISC, baseItem, 9)
 							.requires(compressedBlock)
 							.unlockedBy(getHasName(compressedBlock), has(compressedBlock))
 							.save(output, getConversionRecipeName(baseItem, compressedBlock));
