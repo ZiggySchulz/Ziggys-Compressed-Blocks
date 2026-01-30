@@ -33,7 +33,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 						.define('i', baseItem)
 						.unlockedBy(getHasName(Items.CRAFTING_TABLE), has(Items.CRAFTING_TABLE))
 						.unlockedBy(getHasName(baseItem), has(baseItem))
-						.save(output);
+						.save(output, getConversionRecipeName(compressedBlock, baseItem));
 
 					
 					shapeless(RecipeCategory.MISC, baseItem, 9)
