@@ -4,20 +4,18 @@ import java.util.Arrays;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider.TranslationBuilder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.item.Item;
 
 public class EnglishLangProvider extends FabricLanguageProvider {
-    protected EnglishLangProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
-		super(dataOutput, "en_us", registryLookup);
-	}
+    public EnglishLangProvider(FabricPackOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
+        super(dataOutput, "en_us", registryLookup);
+    }
 
-	@Override
-	public void generateTranslations(HolderLookup.Provider wrapperLookup, TranslationBuilder translationBuilder) {
+    @Override
+    public void generateTranslations(HolderLookup.Provider wrapperLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add("itemGroup.ziggys_compressed_blocks", "Ziggy's Compressed Blocks");
         for (SupportedItemInfo info : ModBlocks.SupportedItems) {
             String itemName = BuiltInRegistries.ITEM.getKey(info.item).getPath();
@@ -26,8 +24,7 @@ public class EnglishLangProvider extends FabricLanguageProvider {
                     "block.ziggys-compressed-blocks.compressed_" + BuiltInRegistries.ITEM.getKey(info.item).getPath(),
                     itemName);
         }
-	}
-
+    }
 
     private String toTitleCase(String input) {
         return Arrays.stream(input.toLowerCase().split(" "))

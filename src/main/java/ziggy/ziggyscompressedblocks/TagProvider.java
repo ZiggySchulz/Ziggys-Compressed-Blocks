@@ -2,14 +2,15 @@ package ziggy.ziggyscompressedblocks;
 
 import java.util.concurrent.CompletableFuture;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.core.registries.BuiltInRegistries;
 
-public class TagProvider extends FabricTagProvider.BlockTagProvider {
-	public TagProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+public class TagProvider extends FabricTagsProvider.BlockTagsProvider {
+	public TagProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
 		super(output, registriesFuture);
 	}
 
@@ -19,7 +20,7 @@ public class TagProvider extends FabricTagProvider.BlockTagProvider {
             SupportedItemInfo info = ModBlocks.SupportedItems[i];
             Block block = ModBlocks.MOD_BLOCKS[i];
             for (TagKey<Block> tag : info.tags) {
-                valueLookupBuilder(tag).add(block);
+                getOrCreateRawBuilder(tag).addOptionalElement(BuiltInRegistries.BLOCK.getKey(block));
             }
             
         }
