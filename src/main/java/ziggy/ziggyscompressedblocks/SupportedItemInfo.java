@@ -22,7 +22,7 @@ public class SupportedItemInfo {
         properties = BlockBehaviour.Properties.ofFullCopy(block);
         properties.strength(block.defaultDestroyTime() * STR_MULTIPLIER,
                 block.getExplosionResistance() * STR_MULTIPLIER);
-        properties.pushReaction(PushReaction.NORMAL);
+        properties.pushReaction(PushReaction.PUSH_PULL);
     }
 
     public SupportedItemInfo(Item item, float strength, SoundType soundType, List<TagKey<Block>> tags) {
